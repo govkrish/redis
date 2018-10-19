@@ -1,0 +1,6 @@
+github.com/garyburd/redigo v1.6.0 h1:0VruCpn7yAIIu7pWVClQC8wxCJEcG3nyzpMSHKi1PQc=
+github.com/garyburd/redigo v1.6.0/go.mod h1:NR3MbYisc3/PwhQ00EMzDiPmrwpPxAn5GI05/YaO1SY=
+github.com/platinasystems/accumulate v0.0.0-20181019183040-63617d15f799 h1:HpgzjOFv5du0h9udWjDgx4t/4KszyyJByKAkIvjl4qw=
+github.com/platinasystems/accumulate v0.0.0-20181019183040-63617d15f799/go.mod h1:lc7wpU1G++0lunURQyH853Y77bwWr0hXPiLLeaxjGIY=
+github.com/platinasystems/atsock v0.0.0-20181019220955-c4cc7ae24dbf h1:ChH/cr79NDkkmHtco+2TC3YT2aBUXV+Kf6SFjSRMycQ=
+github.com/platinasystems/atsock v0.0.0-20181019220955-c4cc7ae24dbf/go.mod h1:1XAb4yaMVNH9PDa7Q4sZmDqHoHSrzUfnGImUuSMpx5U=
