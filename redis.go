@@ -23,6 +23,7 @@ import (
 const rdtimeout = 10 * time.Second
 const wrtimeout = 500 * time.Millisecond
 
+var DefaultHash string
 var keyRe *regexp.Regexp
 var empty = struct{}{}
 
@@ -148,6 +149,9 @@ func Get(key string) (s string, err error) {
 }
 
 func Hdel(key, field string, fields ...string) (i int, err error) {
+	if len(key) == 0 {
+		key = DefaultHash
+	}
 	conn, err := Connect()
 	if err != nil {
 		return
@@ -161,6 +165,9 @@ func Hdel(key, field string, fields ...string) (i int, err error) {
 }
 
 func Hexists(key, field string) (i int, err error) {
+	if len(key) == 0 {
+		key = DefaultHash
+	}
 	conn, err := Connect()
 	if err != nil {
 		return
@@ -174,6 +181,9 @@ func Hexists(key, field string) (i int, err error) {
 }
 
 func Hget(key, field string) (s string, err error) {
+	if len(key) == 0 {
+		key = DefaultHash
+	}
 	conn, err := Connect()
 	if err != nil {
 		return
@@ -187,6 +197,9 @@ func Hget(key, field string) (s string, err error) {
 }
 
 func Hkeys(key string) (keys []string, err error) {
+	if len(key) == 0 {
+		key = DefaultHash
+	}
 	conn, err := Connect()
 	if err != nil {
 		return
@@ -204,6 +217,9 @@ func Hkeys(key string) (keys []string, err error) {
 }
 
 func Hset(key, field string, v interface{}) (i int, err error) {
+	if len(key) == 0 {
+		key = DefaultHash
+	}
 	conn, err := Connect()
 	if err != nil {
 		return
