@@ -22,9 +22,8 @@ type Reg struct {
 type Assigner func(string, interface{}) error
 type Unassigner func(string) error
 
-// e.g. name, "redis-reg"
-func New(name string, assign Assigner, unassign Unassigner) (*Reg, error) {
-	srvr, err := atsock.NewRpcServer(name)
+func New(assign Assigner, unassign Unassigner) (*Reg, error) {
+	srvr, err := atsock.NewRpcServer("redis.reg")
 	if err != nil {
 		return nil, err
 	}

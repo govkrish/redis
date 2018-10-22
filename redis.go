@@ -99,7 +99,7 @@ func Split(key string) []string {
 }
 
 func NewRedisRegAtSock() (*rpc.Client, error) {
-	return atsock.NewRpcClient("redis-reg")
+	return atsock.NewRpcClient("redis.reg")
 }
 
 func NewRedisdAtSock() (net.Conn, error) {
