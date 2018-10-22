@@ -47,8 +47,8 @@ func Quotes(s string) string {
 	return s
 }
 
-func IsReady(machine string) error {
-	return Hwait(machine, "redis.ready", "true", 10*time.Second)
+func IsReady() error {
+	return Hwait(DefaultHash, "redis.ready", "true", 10*time.Second)
 }
 
 // Complete redis Key and Subkey. This skips over leading '-' prefaced flags.
